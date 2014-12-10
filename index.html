@@ -1,25 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title></title>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Your page title here :)</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="img/favicon.png" />
   <link rel="stylesheet" type="text/css" href="device-mockups/device-mockups.css" />
-  <link rel="stylesheet" type="text/css" href="css/animate.css" />
+  <style>
+    .hero {
+      padding: 22rem 0;
+      height: 190px;
+    }
+    .phone {
+      margin-top: 160px;
+      margin-left: 50px;
+    }
+    #home_slides { position: relative; width: 960px; height: 350px;}
+    #home_slides img { position: absolute; z-index: 1; display: none; }
+    #home_slides img.active { display: block; z-index: 3; }
+    #home_slides_2 { position: relative; width: 960px; height: 350px;}
+    #home_slides_2 img { position: absolute; z-index: 1; display: none; }
+    #home_slides_2 img.active { display: block; z-index: 3; }
+  </style>
+
 </head>
 <body>
-  <div style="width: 320px" class="container">
-    <div class="device-mockup iphone5 portrait black">
-      <div class="device">
-        <div class="screen">
-          <!-- PUT CONTENTS HERE -->
-          <h5>Hello Nurse!</h5>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="section container hero">
+    <div class="row">
+      <div class="one-half column">
+        <h4>Finally, you and your audience are on the same page.</h4>
+        <div class="three column">
+          <input class="" type="email">
         </div>
-        <div class="button">
-          <!-- You can hook the "home button" to some JavaScript events or just remove it -->
+        <div class="three column">
+          <button type="submit" class="button-primary">Count Me In!</button>
+        </div>
+      </div>
+      <div class="one-half column devices">
+
+        <div class="one-half column">
+
+          <div style="width: 300px" class="container">
+            <div class="device-mockup imac">
+              <div class="device">
+                <div class="screen">
+                  <!-- PUT CONTENTS HERE -->
+                  <div id="home_slides">
+                    <img src="img/Cirques.jpg" class="active">
+                    <img src="img/ClownFish.jpg">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="one-half column">
+          <div style="width: 200px" class="phone">
+            <div class="device-mockup iphone5 landscape black">
+              <div class="device">
+                <div class="screen">
+                  <!-- PUT CONTENTS HERE -->
+                  <div id="home_slides_2">
+                    <img src="img/Cirques.jpg" class="active">
+                    <img src="img/ClownFish.jpg">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
+
   <script src="js/jquery-2.1.1.min.js"></script>
+  <script>
+    (function(window) {
+
+      SlideCrossFade = {
+        container: 'home_slides',
+        displayTime: 5000,
+        fadeTime: 1500,
+
+        start: function() {
+          var self = this;
+          $('#' + this.container + ' img').show();
+          setInterval(function() { self.next(); }, this.displayTime);
+        },
+
+        next: function() {
+          var $active = $('#' + this.container + ' .active');
+          var $next = ($active.next().length > 0) ? $active.next() : $('#' + this.container + ' img:first');
+          $next.css('z-index', 2); 
+
+          $active.fadeOut(this.fadeTime, function() {
+            $active.css('z-index', 1).show().removeClass('active'); 
+            $next.css('z-index', 3).addClass('active');
+          });
+        }
+      };
+
+      window.SlideCrossFade = SlideCrossFade;
+
+    })(this);
+
+    $(window).load(function() {
+      SlideCrossFade.start();
+    });
+    (function(window) {
+
+      SlideCrossFade2 = {
+        container: 'home_slides_2',
+        displayTime: 5000,
+        fadeTime: 1500,
+
+        start: function() {
+          var self = this;
+          $('#' + this.container + ' img').show();
+          setInterval(function() { self.next(); }, this.displayTime);
+        },
+
+        next: function() {
+          var $active = $('#' + this.container + ' .active');
+          var $next = ($active.next().length > 0) ? $active.next() : $('#' + this.container + ' img:first');
+          $next.css('z-index', 2); 
+
+          $active.fadeOut(this.fadeTime, function() {
+            $active.css('z-index', 1).show().removeClass('active'); 
+            $next.css('z-index', 3).addClass('active');
+          });
+        }
+      };
+
+      window.SlideCrossFade2 = SlideCrossFade2;
+
+    })(this);
+
+    $(window).load(function() {
+      SlideCrossFade2.start();
+    });
+  </script>
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
 </html>
