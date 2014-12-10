@@ -41,6 +41,16 @@
     #home_slides_2 { position: relative; width: 960px; height: 350px;}
     #home_slides_2 img { position: absolute; z-index: 1; display: none; }
     #home_slides_2 img.active { display: block; z-index: 3; }
+    .value { 
+      background: #bada55;
+      text-align: center;
+    }
+    .section { text-color: center; }
+    .values {
+      background: url('../img/raw/jan-malmstrom_1169.jpg');
+      padding-top: 200px;
+      padding-bottom: 190px;
+    }
   </style>
 
 </head>
@@ -52,12 +62,14 @@
     <div class="row">
       <div class="one-half column">
         <h4>Finally, you and your audience are on the same page.</h4>
-        <div class="three column">
-          <input class="" type="email">
-        </div>
-        <div class="three column">
-          <button type="submit" class="button-primary">Count Me In!</button>
-        </div>
+        <form method="post">
+          <div class="three column">
+            <input class="u-full-width" required="required" type="email" name="email" placeholder="you@email.com">
+          </div>
+          <div class="three column">
+            <button type="submit" class="button-primary">Count Me In!</button>
+          </div>
+        </form>
       </div>
       <div class="one-half column devices">
 
@@ -94,6 +106,16 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div> <!-- END section hero -->
+
+  <div class="section values">
+    <div class="container">
+      <div class="row">
+        <div class="one-third column value">1</div>
+        <div class="one-third column value">2</div>
+        <div class="one-third column value">3</div>
       </div>
     </div>
   </div>
