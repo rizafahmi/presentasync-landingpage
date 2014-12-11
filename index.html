@@ -5,7 +5,7 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>Your page title here :)</title>
+  <title>PresentaSYNC - Presentation That SYNC</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -42,14 +42,30 @@
     #home_slides_2 img { position: absolute; z-index: 1; display: none; }
     #home_slides_2 img.active { display: block; z-index: 3; }
     .value { 
-      background: #bada55;
+      /* background: #bada55; */
       text-align: center;
     }
     .section { text-color: center; }
     .values {
-      background: url('../img/raw/jan-malmstrom_1169.jpg');
-      padding-top: 200px;
-      padding-bottom: 190px;
+      background: url('../img/000000_DPP_0101_e.png');
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+    .value {
+      color: white;
+    }
+    .brand {
+      text-align: center;
+      color: white;
+      padding-bottom: 50px;
+    }
+    .footer {
+      padding-top: 50px;
+      padding-bottom: 50px;
+      text-align: center;
+    }
+    a {
+      color: #cacaca;
     }
   </style>
 
@@ -58,18 +74,22 @@
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="header">
+  </div>
   <div class="section container hero">
     <div class="row">
       <div class="one-half column">
-        <h4>Finally, you and your audience are on the same page.</h4>
-        <form method="post">
-          <div class="three column">
-            <input class="u-full-width" required="required" type="email" name="email" placeholder="you@email.com">
-          </div>
-          <div class="three column">
-            <button type="submit" class="button-primary">Count Me In!</button>
-          </div>
+        <h1 class="title">PresentaSYNC!</h1>
+        <h4>You and your audiences should be on the same page.</h4>
+
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+          <input type="hidden" name="cmd" value="_s-xclick">
+          <input type="hidden" name="hosted_button_id" value="K6CG26BLARA6Q">
+          <!-- <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal &#45; The safer, easier way to pay online!"> -->
+          <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+          <button type="submit" class="button-primary">Get Early Access</button>
         </form>
+
       </div>
       <div class="one-half column devices">
 
@@ -81,8 +101,8 @@
                 <div class="screen">
                   <!-- PUT CONTENTS HERE -->
                   <div id="home_slides">
-                    <img src="img/Cirques.jpg" class="active">
-                    <img src="img/ClownFish.jpg">
+                    <img src="img/page1-large.png" class="active">
+                    <img src="img/page2-large.png">
                   </div>
                 </div>
               </div>
@@ -98,8 +118,8 @@
                 <div class="screen">
                   <!-- PUT CONTENTS HERE -->
                   <div id="home_slides_2">
-                    <img src="img/Cirques.jpg" class="active">
-                    <img src="img/ClownFish.jpg">
+                    <img src="img/page1-small.png" class="active">
+                    <img src="img/page2-small.png">
                   </div>
                 </div>
               </div>
@@ -113,11 +133,34 @@
   <div class="section values">
     <div class="container">
       <div class="row">
-        <div class="one-third column value">1</div>
-        <div class="one-third column value">2</div>
-        <div class="one-third column value">3</div>
+        <div class="one-third column value">
+          <img src="img/presentation-white.svg" style="width: 126px;" />
+          <h5 class="value-heading">Share Your Presentation</h5>
+          <p class="value-description">PresentaSYNC is the best way to create
+          and share your awesome presentation online.</p>
+        </div>
+        <div class="one-third column value">
+          <img src="img/follow-white.svg" />
+          <h5 class="value-heading">Your Audience Will Follow</h5>
+          <p class="value-description">
+            When you do the presentation, your audiences will follow what
+            page you see on your own screen. In <a href="https://meteor.com/" target="_blank">real-time!</a>
+          </p>
+        </div>
+        <div class="one-third column value">
+          <img src="img/distraction-white.svg" style="width: 126px"/>
+          <h5 class="value-heading">Distraction-Free</h5>
+          <p class="value-description">
+            No more distracted users. All attentions will be yours!
+          </p>
+        </div>
       </div>
     </div>
+  </div>
+
+
+  <div class="section footer">
+    Brought To You by <a href="https://twitter.com/rizafahmi22" target="_blank">Riza Fahmi</a>.
   </div>
 
   <script src="js/jquery-2.1.1.min.js"></script>
