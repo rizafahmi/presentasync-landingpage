@@ -25,34 +25,27 @@
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="img/favicon.png" />
-  <link rel="stylesheet" type="text/css" href="device-mockups/device-mockups.css" />
   <style>
+    .background-hero {
+      background: url('../img/stardust.png');
+
+    }
     .hero {
       padding: 22rem 0;
       height: 190px;
+      color: whitesmoke;
     }
-    .phone {
-      margin-top: 160px;
-      margin-left: 50px;
-    }
-    #home_slides { position: relative; width: 960px; height: 350px;}
-    #home_slides img { position: absolute; z-index: 1; display: none; }
-    #home_slides img.active { display: block; z-index: 3; }
-    #home_slides_2 { position: relative; width: 960px; height: 350px;}
-    #home_slides_2 img { position: absolute; z-index: 1; display: none; }
-    #home_slides_2 img.active { display: block; z-index: 3; }
     .value { 
       /* background: #bada55; */
       text-align: center;
     }
-    .section { text-color: center; }
+    /* .section { text-align: center; } */
     .values {
-      background: url('../img/000000_DPP_0101_e.png');
       padding-top: 100px;
       padding-bottom: 100px;
+      border-bottom: 1px solid #eee;
     }
     .value {
-      color: white;
     }
     .brand {
       text-align: center;
@@ -65,9 +58,6 @@
       text-align: center;
       border-top: 1px solid #eee;
     }
-    a {
-      color: #cacaca;
-    }
     .signup {
       padding-top: 50px;
     }
@@ -78,79 +68,74 @@
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="header">
+  <div class="background-hero">
+    <div class="section container hero">
+      <div class="row">
+        <div class="two-thirds column">
+          <h1 class="title">MeteorDose Learning Club</h1>
+          <h4>Well crafted course for speed up your Meteor learning.</h4>
+          <p>Comprehensive course designed to teach you how to build a meteor app
+            from scratch to exposing your app to the world in just two days!</p>
+          <a href="#signup" class="button button-primary">Sign Me Up!</a>
+        </div>
+        <div class="one-third column">
+          <img src="img/meteor-logo-only.png">
+        </div>
+
+      </div>
+    </div> <!-- END section hero -->
   </div>
-  <div class="section container hero">
-    <div class="row">
-      <div class="one-half column">
-        <h1 class="title">MeteorDose Learning Club</h1>
-        <h4>Well crafted course for speed up your Meteor learning</h4>
-        <a href="#signup" class="button button-primary">Sign Me Up!</a>
-
-      </div>
-      <div class="one-half column devices">
-
-        <div class="one-half column">
-
-          <div style="width: 300px" class="container">
-            <div class="device-mockup imac">
-              <div class="device">
-                <div class="screen">
-                  <!-- PUT CONTENTS HERE -->
-                  <div id="home_slides">
-                    <img src="img/page1-large.png" class="active">
-                    <img src="img/page2-large.png">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="one-half column">
-          <div style="width: 200px" class="phone">
-            <div class="device-mockup iphone5 landscape black">
-              <div class="device">
-                <div class="screen">
-                  <!-- PUT CONTENTS HERE -->
-                  <div id="home_slides_2">
-                    <img src="img/page1-small.png" class="active">
-                    <img src="img/page2-small.png">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> <!-- END section hero -->
 
   <div class="section values">
     <div class="container">
       <div class="row">
-        <div class="one-third column value">
-          <img src="img/presentation-white.svg" style="width: 126px;" />
-          <h5 class="value-heading">Share Your Presentation</h5>
-          <p class="value-description">PresentaSYNC is the best way to create
-          and share your awesome presentation online.</p>
-        </div>
-        <div class="one-third column value">
-          <img src="img/follow-white.svg" />
-          <h5 class="value-heading">Your Audience Will Follow</h5>
-          <p class="value-description">
-            When you do the presentation, your audiences will follow what
-            page you see on your own screen. In <a href="https://meteor.com/" target="_blank">real-time!</a>
-          </p>
-        </div>
-        <div class="one-third column value">
-          <img src="img/distraction-white.svg" style="width: 126px"/>
-          <h5 class="value-heading">Distraction-Free</h5>
-          <p class="value-description">
-            No more distracted users. All attentions will be yours!
-          </p>
-        </div>
+        <h3>Mastering Meteor Class</h3>
+        <p>
+          We will learn together and guide you step-by-step
+          to show you the path to Meteor mastery. Skip the <strong>steep learning curve</strong>,
+          within two days extensive session you'll be able to build real-time
+          and well crafted application.
+        </p>
+        <p>
+          When I started use Meteor, I didn't know how to properly organize my files
+          or how to deploy Meteor app. Don't you worry, I've been through it and
+          I can guide you.
+        </p>
+        <p>
+          You will learn how to:
+
+        </p>
+        <ul>
+          <li>file organization</li>
+          <li>create database collections</li>
+          <li>publication and subscription</li>
+          <li>login and registration system</li>
+          <li>deploying to the server</li>
+          <li>and much more!</li>
+        </ul>
+
+        <p>
+          My main goal isn't just to teach you how to build one Meteor app.
+          I want to give you the tools and <em>know-how</em> to build <em>dozens</em>
+          of apps. 10% theory and 90% practical stuff!
+        </p>
+
+        <h3>Who Am I?</h3>
+        <p>
+        My name is Riza Fahmi, Co-Founder, CTO and developer. Co-found <a href="http://bdb.co.id/" target="_blank">BdB: Indonesia
+          Audio News</a> that build with Meteor, your <a href="http://www.meetup.com/Meteor-Jakarta/" target="_blank">Meteor-Jakarta</a> captain. Rocking developer world since 2003, and living in poliglot world from PHP, Java, C, C++, Python, Obj-C, Erlang, Elixir, and Ruby.
+        </p>
+        <p>I've been looking for Meteor-like platform a long time ago. It's amazed
+          me how <strong>fast and productive</strong> it is build an app using Meteor and want to spread this awesome framework to as many as
+          developers possible. That's why by occasion I given talk in developers meetups
+          such as JakartaJS and other. See my videos below.
+        </p>
+        <iframe width="560" height="315" src="//www.youtube.com/embed/JshEYLzo-Vg" frameborder="0" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="//www.youtube.com/embed/nuJ4XaCmPUs" frameborder="0" allowfullscreen></iframe>
+
+        <br>
+        <br>
+        <p>My mission is to <strong>inspire</strong> fellow developers to build your own product, from your own ideas and your own dreams, not other's. And by learning Meteor properly, your dream will come true!</p>
       </div>
     </div>
   </div>
